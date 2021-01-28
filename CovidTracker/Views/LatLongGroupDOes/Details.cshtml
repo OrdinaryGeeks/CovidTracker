@@ -1,0 +1,50 @@
+﻿@model CovidTracker.Models.LatLongGroupDO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LatLongGroupDO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NorthWestLat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NorthWestLat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NorthWestLong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NorthWestLong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SouthEastLat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SouthEastLat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SouthEastLong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SouthEastLong)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LatLongGroupDOID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

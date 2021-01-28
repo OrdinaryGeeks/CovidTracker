@@ -7,7 +7,9 @@ namespace CovidTracker.Models
 {
     public class Association
     {
-        public int ID { get; set; }
+        public int AssociationID { get; set; }
         public virtual ICollection<User> Users { get; set; }
+        public virtual int TimeBlockID { get; set; }
+        public virtual int LatLongGroupID { get; set; }
     }
 }

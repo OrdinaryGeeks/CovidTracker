@@ -6,6 +6,9 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Data.Entity;
+using CovidTracker.Models;
+
 
 namespace CovidTracker
 {
@@ -13,6 +16,7 @@ namespace CovidTracker
     {
         protected void Application_Start()
         {
+           // Database.SetInitializer<DOContext>(new CovidTrackerInitializer());
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

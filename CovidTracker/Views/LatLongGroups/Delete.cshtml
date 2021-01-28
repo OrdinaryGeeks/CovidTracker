@@ -1,0 +1,56 @@
+﻿@model CovidTracker.Models.LatLongGroup
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>LatLongGroup</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NorthWestLat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NorthWestLat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NorthWestLong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NorthWestLong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SouthEastLat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SouthEastLat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SouthEastLong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SouthEastLong)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
